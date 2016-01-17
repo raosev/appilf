@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.version      = Appilf::VERSION
   s.required_ruby_version = '>= 1.9.3'
   s.summary      = "A simple Ruby wrapper for Flippa's API"
+  s.description  = "Provides quick access to Flippa's API methods exposed to the public"
   s.license = 'MIT'
 
   s.author       = "Rogelio Alejandro Sevilla"
@@ -27,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 0.9"
   s.add_development_dependency "rspec", "~> 2.11"
   s.add_development_dependency "yard",  "~> 0.6.0"
+  s.add_development_dependency "pry", "~> 0.10.3"
 end
