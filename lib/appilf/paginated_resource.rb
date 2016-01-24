@@ -3,13 +3,13 @@ module Appilf
   module PaginatedResource
 
     # page_meta vars
-    attr_accesor :page_number , :page_size, :total_results
+    attr_accessor :page_number , :page_size, :total_results
 
     # page_links vars
-    attr_accesor :prev, :next
+    attr_accessor :prev, :next
 
     #
-    attr_accesor :data
+    attr_accessor :data
 
     def set_page(paginated_response)
       page_meta = paginated_response['meta']
