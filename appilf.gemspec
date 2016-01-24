@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('rest-client', '~> 1.4')
   s.add_dependency('json', '~> 1.8')
+  s.add_dependency('methodize', '~> 0.3')
 
   s.add_development_dependency "fakeweb", "~> 1.3"
   s.add_development_dependency "rake", "~> 0.9"
