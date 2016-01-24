@@ -8,7 +8,7 @@ module Appilf
       opts.each_pair do |key, val|
         instance_variable_set(:"@#{key}", val)
       end
-      authenticate
+      authenticate if opts.present? && opts[:access_token].blank?
       self
     end
 

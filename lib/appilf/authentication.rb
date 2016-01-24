@@ -1,7 +1,7 @@
 module Appilf
 
   module Authentication
-    AUTHENTICATION_URL = 'https://api.flippa.com/v3/oauth2/token'
+    AUTHENTICATION_PATH = "/oauth2/token"
 
     attr_accessor :token, :username, :password, :access_token, :token_type
 
@@ -14,7 +14,7 @@ module Appilf
     private
 
     def auth_by_password
-      response = send_post_request(AUTHENTICATION_URL,{ grant_type: 'password',
+      response = send_post_request(AUTHENTICATION_PATH,{ grant_type: 'password',
                                                         username: username,
                                                         password: password
                                                         })
