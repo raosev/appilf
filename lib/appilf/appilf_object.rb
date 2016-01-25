@@ -14,16 +14,20 @@ module Appilf
       @links ||= {}
     end
 
+    def item_data
+      @item_data ||= {}
+    end
+
     def initialize(api_element_hash)
       initialize_meta_data(api_element_hash)
-      self.item_data = api_element_hash['data'].methodize!
+      self.item_data = api_element_hash.fetch('data', {}).methodize!
     end
 
     def initialize_meta_data(api_element_hash)
       self.meta = api_element_hash.fetch('data', {}).delete('meta')
       self.links = api_element_hash.fetch('data', {}).delete('links')
-      self.meta.methodize! if self.meta
-      self.links.methodize! if self.links
+      self.meta.methodize!
+      self.links.methodize!
     end
 
     def method_missing(name)
