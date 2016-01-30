@@ -19,19 +19,23 @@ module Appilf
     end
 
     def initialize(api_element_hash)
-      initialize_meta_data(api_element_hash)
+      init_meta_data(api_element_hash)
       self.item_data = api_element_hash.fetch('data', {}).methodize!
     end
 
-    def initialize_meta_data(api_element_hash)
+    def init_meta_data(api_element_hash)
       self.meta = api_element_hash.fetch('data', {}).delete('meta')
       self.links = api_element_hash.fetch('data', {}).delete('links')
       self.meta.methodize!
       self.links.methodize!
     end
 
-    def method_missing(name)
-      return self.item_data.send(name) if self.item_data
+    def respond_to_missing?(method_name, include_private = false)
+      item_data.keys.include? method_name
+    end
+
+    def method_missing(method_name, *args)
+      return item_data.send(method_name)
       super
     end
 
