@@ -43,6 +43,7 @@ module Appilf
     end
 
     def endpoint_url(request_path)
+      return request_path if request_path=~/^https/
       "#{BASE_API_URL}#{request_path}"
     end
 
