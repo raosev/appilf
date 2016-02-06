@@ -28,7 +28,7 @@ module Appilf
 
     def set_page(paginated_response)
       init_page_meta_data(paginated_response)
-      self.current_data = AppilfList.new(paginated_response)
+      self.current_data = Appilf::Util.translate_from_response(paginated_response)
     end
 
     def init_page_meta_data(api_element_hash)

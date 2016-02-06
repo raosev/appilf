@@ -13,7 +13,7 @@ module Appilf
 
     def self.retrieve(listing_id)
       response = api_get("#{LISTING_PATH}/#{listing_id}")
-      new(response)
+      Appilf::Util.translate_from_response(response)
     end
 
     def initialize(listing_hash)
@@ -29,8 +29,6 @@ module Appilf
       end
     end
 
-
   end
-
 
 end
