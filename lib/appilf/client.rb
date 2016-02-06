@@ -12,7 +12,7 @@ module Appilf
         instance_variable_set(:"@#{key}", val)
       end
       authenticate if opts && !opts[:access_token]
-      self.user = identify
+      self.user = retrieve_user
       self
     end
 
