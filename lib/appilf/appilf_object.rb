@@ -38,6 +38,14 @@ module Appilf
       item_data.send(method_name)
     end
 
+    def add_relationships(relationships_hash)
+      self.class.instance_eval do
+        relationships_hash.each_pair do |k, v|
+          define_method(k) { Util.translate_from_response(v) }
+        end
+      end
+    end
+
   end
 
 end

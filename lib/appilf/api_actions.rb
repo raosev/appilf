@@ -13,9 +13,15 @@ module Appilf
       handle_from_response(e)
     end
 
+    def api_delete(path, payload, headers = {})
+      RestClient::Request.execute(method: :delete, url: endpoint_url(path),
+                                  payload: payload, headers: headers)
+      :success
+    rescue RestClient::RequestFailed => e
+      handle_from_response(e)
+    end
+
     def api_get(path, headers = {})
-      # RestClient::Request.execute(method: :delete, url: 'http://example.com/resource',
-      #                             payload: 'foo', headers: {myheader: 'bar'})
       response = RestClient::Request.execute(method: :get, url: endpoint_url(path), headers: headers)
       JSON.parse(response)
     rescue RestClient::RequestFailed => e

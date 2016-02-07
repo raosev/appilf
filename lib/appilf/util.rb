@@ -22,7 +22,8 @@ module Appilf
       @flippa_class_mappings ||= {
           'listings' => Appilf::Listing,
           'users' => Appilf::User,
-          'domain-traits' => Appilf::DomainTrait
+          'domain-traits' => Appilf::DomainTrait,
+          'watched-items' => Appilf::WatchedItem
       }
       @flippa_class_mappings[flippa_type] || AppilfObject
     end

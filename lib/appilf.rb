@@ -17,6 +17,7 @@ require 'appilf/client'
 require 'appilf/listing'
 require 'appilf/user'
 require 'appilf/domain_trait'
+require 'appilf/watched_item'
 require 'appilf/util'
 
 
