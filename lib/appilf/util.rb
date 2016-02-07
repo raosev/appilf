@@ -21,7 +21,8 @@ module Appilf
     def self.flippa_class_mapping(flippa_type)
       @flippa_class_mappings ||= {
           'listings' => Appilf::Listing,
-          'users' => Appilf::User
+          'users' => Appilf::User,
+          'domain-traits' => Appilf::DomainTrait
       }
       @flippa_class_mappings[flippa_type] || AppilfObject
     end

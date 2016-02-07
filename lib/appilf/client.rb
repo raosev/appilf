@@ -1,4 +1,6 @@
 require 'appilf/client/users'
+require 'appilf/client/alerts'
+require 'appilf/client/domain_traits'
 
 module Appilf
 
@@ -6,6 +8,8 @@ module Appilf
     include Appilf::APIActions
     include Appilf::Authentication
     include Appilf::Client::Users
+    include Appilf::Client::Alerts
+    include Appilf::Client::DomainTraits
 
     def initialize(opts={})
       opts.each_pair do |key, val|

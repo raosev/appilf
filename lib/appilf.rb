@@ -16,6 +16,7 @@ require 'appilf/paginated_resource'
 require 'appilf/client'
 require 'appilf/listing'
 require 'appilf/user'
+require 'appilf/domain_trait'
 require 'appilf/util'
 
 

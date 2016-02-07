@@ -18,6 +18,9 @@ module Appilf
       { Authorization: self.access_token }
     end
 
+    def authenticated_user_path
+      "#{Appilf::Client::Users::PATH}/#{user.id}"
+    end
 
     private
 

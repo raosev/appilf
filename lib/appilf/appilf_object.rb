@@ -35,8 +35,7 @@ module Appilf
     end
 
     def method_missing(method_name, *args)
-      return item_data.send(method_name)
-      super
+      item_data.send(method_name)
     end
 
   end
