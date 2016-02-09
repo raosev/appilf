@@ -4,7 +4,7 @@ module Appilf
 
     module SavedSearches
 
-      PATH = "/saved-searches"
+      PATH = "#{APIActions::BASE_API_URL}/saved-searches"
 
       def list_saved_searches
         response = authenticated_api_get("#{authenticated_user_path}#{PATH}")

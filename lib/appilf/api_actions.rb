@@ -4,9 +4,7 @@ module Appilf
     BASE_API_URL = 'https://api.flippa.com/v3'
 
     def api_post(path, payload, headers = {})
-      # RestClient::Request.execute(method: :delete, url: 'http://example.com/resource',
-      #                             payload: 'foo', headers: {myheader: 'bar'})
-      response = RestClient::Request.execute(method: :post, url: endpoint_url(path),
+      response = RestClient::Request.execute(method: :post, url: path,
                                              payload: payload, headers: headers)
       JSON.parse(response)
     rescue RestClient::RequestFailed => e
@@ -14,7 +12,7 @@ module Appilf
     end
 
     def api_delete(path, payload, headers = {})
-      RestClient::Request.execute(method: :delete, url: endpoint_url(path),
+      RestClient::Request.execute(method: :delete, url: path,
                                   payload: payload, headers: headers)
       :success
     rescue RestClient::RequestFailed => e
@@ -22,13 +20,11 @@ module Appilf
     end
 
     def api_get(path, headers = {})
-      response = RestClient::Request.execute(method: :get, url: endpoint_url(path), headers: headers)
+      response = RestClient::Request.execute(method: :get, url: path, headers: headers)
       JSON.parse(response)
     rescue RestClient::RequestFailed => e
       handle_from_response(e)
     end
-
-
 
     def handle_from_response(response_error)
       message = JSON.parse(response_error.response)['error']
@@ -47,12 +43,6 @@ module Appilf
           raise response_error
       end
     end
-
-    def endpoint_url(request_path)
-      return request_path if request_path=~/^https/
-      "#{BASE_API_URL}#{request_path}"
-    end
-
 
   end
 

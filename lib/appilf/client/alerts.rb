@@ -4,7 +4,7 @@ module Appilf
 
     module Alerts
 
-      PATH = "/alerts"
+      PATH = "#{APIActions::BASE_API_URL}/alerts"
 
       def list_alerts
         response = authenticated_api_get("#{authenticated_user_path}#{PATH}")

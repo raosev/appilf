@@ -3,7 +3,7 @@ module Appilf
   class Client
 
     module Users
-      PATH = "/users"
+      PATH = "#{APIActions::BASE_API_URL}/users"
 
       def retrieve_user(user_id = nil)
         user_id ||= 'identify'

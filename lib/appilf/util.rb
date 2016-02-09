@@ -18,7 +18,6 @@ module Appilf
       end
     end
 
-
     def self.array_from_response_item(api_elements_hash)
       items = []
       api_elements_hash['data'].each do |api_element_hash|
@@ -32,7 +31,6 @@ module Appilf
       flippa_type = flippa_type.fetch('type', nil) if flippa_type
       flippa_class_mapping(flippa_type).send(:new, response_item)
     end
-
 
     def self.flippa_class_mapping(flippa_type)
       @flippa_class_mappings ||= {
@@ -61,6 +59,5 @@ module Appilf
     end
 
   end
-
 
 end

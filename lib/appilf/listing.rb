@@ -3,7 +3,7 @@ module Appilf
   class Listing < AppilfObject
     extend APIActions
 
-    PATH = "/listings"
+    PATH = "#{APIActions::BASE_API_URL}/listings"
 
     def initialize(listing_hash)
       add_relationships(listing_hash['data'].delete('relationships'))

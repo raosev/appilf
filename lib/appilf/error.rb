@@ -1,9 +1,7 @@
 # see https://developers.flippa.com/?shell#bad-request-(400)
 module Appilf
 
-
   class Error < StandardError; end
-
 
   # Errors returned by Flippa
   # Raised on error 400

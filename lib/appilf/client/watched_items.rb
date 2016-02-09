@@ -4,7 +4,7 @@ module Appilf
 
     module WatchedItems
 
-      PATH = "/watched-items"
+      PATH = "#{APIActions::BASE_API_URL}/watched-items"
 
       def create_watched_item(item_type, item_id)
         response = authenticated_api_post("#{authenticated_user_path}#{PATH}", {

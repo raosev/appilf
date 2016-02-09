@@ -14,7 +14,6 @@ require 'appilf/authentication'
 require 'appilf/resource_page'
 require 'appilf/client'
 
-
 # flippa objects
 require 'appilf/listing'
 require 'appilf/user'
@@ -25,8 +24,6 @@ require 'appilf/saved_search'
 # util methods
 require 'appilf/util'
 
-
 module Appilf
-
 
 end
