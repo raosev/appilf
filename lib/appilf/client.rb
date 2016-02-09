@@ -1,6 +1,7 @@
 require 'appilf/client/users'
 require 'appilf/client/alerts'
 require 'appilf/client/domain_traits'
+require 'appilf/client/saved_searches'
 require 'appilf/client/watched_items'
 
 module Appilf
@@ -11,6 +12,7 @@ module Appilf
     include Appilf::Client::Users
     include Appilf::Client::Alerts
     include Appilf::Client::DomainTraits
+    include Appilf::Client::SavedSearches
     include Appilf::Client::WatchedItems
 
     def initialize(opts={})

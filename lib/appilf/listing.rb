@@ -2,7 +2,6 @@ module Appilf
 
   class Listing < AppilfObject
     extend APIActions
-    extend PaginatedResource
 
     PATH = "/listings"
 
@@ -11,9 +10,9 @@ module Appilf
       super
     end
 
-    def self.list
-      response = api_get(PATH)
-      set_page(response)
+    def self.list(params = {})
+      response = api_get(PATH, params: Appilf::Util.parse_query_params(params))
+      Appilf::Util.translate_from_response(response)
     end
 
     def self.retrieve(listing_id)
