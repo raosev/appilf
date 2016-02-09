@@ -1,0 +1,48 @@
+{
+  "data": {
+    "type": "listings",
+    "id": "6046240",
+    "app_downloads_per_month": null,
+    "bid_count": 0,
+    "buy_it_now_price": null,
+    "confidential": false,
+    "current_price": 50,
+    "ends_at": "2016-02-16T07:43:54+11:00",
+    "established_at": "2001-01-31T11:00:00+11:00",
+    "has_verified_revenue": false,
+    "has_verified_traffic": false,
+    "html_url": "https://api.flippa.com/6046240-cool-company-name",
+    "page_views_per_month": null,
+    "post_auction_negotiable": false,
+    "profit_per_month": 0,
+    "property_name": "digamatic.com",
+    "property_type": "domain",
+    "reserve_met": false,
+    "revenue_per_month": 0,
+    "revenue_sources": [],
+    "sale_method": "auction",
+    "starts_at": "2016-02-10T07:43:54+11:00",
+    "status": "open",
+    "summary": null,
+    "title": "cool company name !",
+    "uniques_per_month": null,
+    "watching": false,
+    "images": {
+      "thumbnail": {
+        "url": null,
+        "targets": []
+      }
+    },
+    "relationships": {
+      "seller": {
+        "data": {
+          "type": "users",
+          "id": "1088215"
+        },
+        "links": {"self": "https://api.flippa.com/v3/users/1088215"}
+      },
+      "tags_site_type": {"links": {"self": "https://api.flippa.com/v3/listings/6046240/tags"}}
+    },
+    "links": {"self": "https://api.flippa.com/v3/listings/6046240"}
+  }
+}

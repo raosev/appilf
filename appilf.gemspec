@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency('json', '~> 1.8')
   s.add_dependency('methodize', '~> 0.3')
 
-  s.add_development_dependency "fakeweb", "~> 1.3"
+  s.add_development_dependency "webmock", "~> 1.22.6"
   s.add_development_dependency "rake", "~> 0.9"
   s.add_development_dependency "rspec", "~> 2.11"
   s.add_development_dependency "yard",  "~> 0.6.0"
