@@ -1,9 +1,9 @@
 module Appilf
 
   module Authentication
-    AUTHENTICATION_PATH = "/oauth2/token"
+    PATH = "#{APIActions::BASE_API_URL}/oauth2/token"
 
-    attr_accessor :token, :username,
+    attr_accessor :username,
                   :password,
                   :access_token,
                   :token_type,
@@ -25,7 +25,7 @@ module Appilf
     private
 
     def auth_by_password
-      response = api_post(AUTHENTICATION_PATH,{ grant_type: 'password',
+      response = api_post(PATH,{ grant_type: 'password',
                                                         username: username,
                                                         password: password
                                                         })
