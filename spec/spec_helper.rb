@@ -17,6 +17,13 @@ module Appilf
                status: code)
     end
 
+    def stub_api_post_request(api_path, mocked_response, code = 200, request_body = {})
+      stub_request(:post, api_path).
+          with(body: request_body).
+          to_return(body: load_test_data(mocked_response_file_path(mocked_response)),
+                    status: code)
+    end
+
     def load_test_data(mocked_response_path)
       File.read(mocked_response_path)
     end

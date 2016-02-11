@@ -1,0 +1,12 @@
+{
+  "data": {
+    "type": "users",
+    "id": 123,
+    "username": "superdog@somedog.com",
+    "full_name": "Mr. Super Dog",
+    "is_admin": false
+  },
+  "links": {
+    "self": "https://api.flippa.com/v3/users/123"
+  }
+}
