@@ -14,7 +14,7 @@ module Appilf
       stub_request(:get, api_path).
           with(query: query_params).
           to_return(body: load_test_data(mocked_response_file_path(mocked_response_file)),
-               status: code)
+                    status: code)
     end
 
     def stub_api_post_request(api_path, mocked_response, code = 200, request_body = {})
@@ -36,7 +36,17 @@ module Appilf
       "spec/mocked_responses/#{path}"
     end
 
-
   end
 
+end
+
+def stub_identity_request
+  Appilf::Client.any_instance.stub(:retrieve_user).and_call_original
+  Appilf::Client.any_instance.stub(:retrieve_user).
+      with(no_args).
+      and_return(Appilf::User.new(load_test_json_data(mocked_response_file_path('client/users/user.json'))))
+end
+
+def authenticated_client
+  Appilf::Client.new(access_token: "6a853b20a67d41fc199e635071e45a7cf3fff927")
 end

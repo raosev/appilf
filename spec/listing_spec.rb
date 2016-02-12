@@ -3,9 +3,6 @@ require 'spec_helper'
 describe Appilf::Listing do
   include Appilf::TestData
 
-  # it 'bla bla' do
-  #   skip
-  # end
   describe '.new' do
     let(:listing) { Appilf::Listing.new(load_test_json_data(mocked_response_file_path('listing/listing.json'))) }
 
