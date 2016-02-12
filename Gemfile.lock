@@ -10,7 +10,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
-    columnize (0.9.0)
     coveralls (0.8.10)
       json (~> 1.8)
       rest-client (>= 1.6.8, < 2)
@@ -20,12 +19,6 @@ GEM
       tins (~> 1.6.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    debugger (1.6.8)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.3.5)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.3.8)
     diff-lcs (1.2.5)
     docile (1.1.5)
     domain_name (0.5.25)
@@ -75,7 +68,6 @@ PLATFORMS
 DEPENDENCIES
   appilf!
   coveralls (~> 0.8)
-  debugger (~> 1.6)
   rake (~> 0.9)
   rspec (~> 2.11)
   webmock (~> 1.22)
