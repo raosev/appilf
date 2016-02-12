@@ -7,7 +7,7 @@ describe Appilf::Client do
 
   describe '.list_alerts' do
     let(:alerts) { client.list_alerts }
-    before { stub_api_get_request("#{client.authenticated_user_path}#{Appilf::Client::Alerts::PATH}", 'client/alerts/alerts.json') }
+    before { stub_api_get_request("#{client.authenticated_user_path}#{Appilf::Client::Alerts::PATH}", 'client/alerts.json') }
 
     it 'should return a generic Appilf::AppilfObject instance' do
       alerts.class.should == Appilf::AppilfObject

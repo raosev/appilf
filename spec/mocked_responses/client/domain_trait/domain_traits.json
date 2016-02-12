@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "type": "domain-traits",
+      "id": "memorable_one_word"
+    },
+    {
+      "type": "domain-traits",
+      "id": "premium"
+    },
+    {
+      "type": "domain-traits",
+      "id": "verified"
+    }
+  ]
+}

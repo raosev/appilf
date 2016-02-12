@@ -7,7 +7,7 @@ describe Appilf::Client do
 
     context 'using password grant' do
       let(:creds) { {username: 'superdog@somedog.com', password: '123456'} }
-      before { stub_api_get_request("#{Appilf::Client::Users::PATH}/identify", 'client/users/user.json') }
+      before { stub_api_get_request("#{Appilf::Client::Users::PATH}/identify", 'client/user.json') }
 
       context 'using correct credentials' do
         let(:client) { Appilf::Client.new(creds) }
@@ -43,7 +43,7 @@ describe Appilf::Client do
 
     context 'initializing with token directly' do
       let(:client) { Appilf::Client.new(access_token: "6a853b20a67d41fc199e635071e45a7cf3fff927") }
-      before { stub_api_get_request("#{Appilf::Client::Users::PATH}/identify", 'client/users/user.json') }
+      before { stub_api_get_request("#{Appilf::Client::Users::PATH}/identify", 'client/user.json') }
 
       it 'should store the access token' do
         client.access_token.should == "6a853b20a67d41fc199e635071e45a7cf3fff927"

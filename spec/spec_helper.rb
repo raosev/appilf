@@ -44,7 +44,7 @@ def stub_identity_request
   Appilf::Client.any_instance.stub(:retrieve_user).and_call_original
   Appilf::Client.any_instance.stub(:retrieve_user).
       with(no_args).
-      and_return(Appilf::User.new(load_test_json_data(mocked_response_file_path('client/users/user.json'))))
+      and_return(Appilf::User.new(load_test_json_data(mocked_response_file_path('client/user.json'))))
 end
 
 def authenticated_client

@@ -4,7 +4,7 @@ describe Appilf::User do
   include Appilf::TestData
 
   describe '.new' do
-    let(:user) { Appilf::User.new(load_test_json_data(mocked_response_file_path('client/users/user.json'))) }
+    let(:user) { Appilf::User.new(load_test_json_data(mocked_response_file_path('client/user.json'))) }
 
     it 'should respond to id' do
       user.id.should == 123
