@@ -23,5 +23,4 @@ describe Appilf::User do
     end
   end
 
-
 end
