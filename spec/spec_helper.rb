@@ -1,7 +1,6 @@
 require 'coveralls'
 Coveralls.wear!
 
-require 'debugger'
 require 'appilf'
 require 'webmock/rspec'
 WebMock.disable_net_connect!
