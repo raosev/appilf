@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "total_results": 2,
+    "page_number": 1,
+    "page_size": 30
+  },
+  "links": {
+    "prev": null,
+    "next": null
+  },
+  "data": [
+    {
+      "type": "saved-searches",
+      "id": "789",
+      "name": "below $500"
+    },
+    {
+      "type": "saved-searches",
+      "id": "456",
+      "name": "matching 'sloth'"
+    }
+  ]
+}

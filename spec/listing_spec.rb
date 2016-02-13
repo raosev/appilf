@@ -137,11 +137,11 @@ describe Appilf::Listing do
       let(:resource_page) { Appilf::Listing.list }
       before { stub_api_get_request(Appilf::Listing::PATH, 'listing/listing_page_1.json') }
 
-      it 'should be a ResourcePage' do
+      it 'should be a Appilf::ResourcePage' do
         resource_page.class.should == Appilf::ResourcePage
       end
 
-      specify 'page should contain 30 entries' do
+      it 'should contain 30 entries' do
         resource_page.count.should == 30
       end
 
@@ -149,6 +149,10 @@ describe Appilf::Listing do
         resource_page.page_meta.page_number.should == 1
         resource_page.page_meta.page_size.should == 30
         resource_page.page_meta.total_results.should == 1657436
+      end
+
+      specify 'all entries should be of type Appilf::Listing' do
+        resource_page.all?{ |listing| listing.class.should == Appilf::Listing  }.should be_truthy
       end
 
       context 'navigating to another page' do
