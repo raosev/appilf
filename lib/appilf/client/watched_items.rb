@@ -4,10 +4,8 @@ module Appilf
 
     module WatchedItems
 
-      PATH = "#{APIActions::BASE_API_URL}/watched-items"
-
       def create_watched_item(item_type, item_id)
-        response = authenticated_api_post("#{authenticated_user_path}#{PATH}", {
+        response = authenticated_api_post(watched_items_path, {
                                                                                  item_type: item_type,
                                                                                  item_id: item_id
                                                                              })
@@ -15,11 +13,16 @@ module Appilf
       end
 
       def delete_watched_item(item_type, item_id)
-        authenticated_api_delete("#{authenticated_user_path}#{PATH}", {
+        authenticated_api_delete(watched_items_path, {
                                                                         item_type: item_type,
                                                                         item_id: item_id
                                                                     })
       end
+
+      def watched_items_path
+        "#{authenticated_user_path}/watched-items"
+      end
+
 
     end
 

@@ -19,7 +19,7 @@ module Appilf
     end
 
     def authenticated_user_path
-      "#{Appilf::Client::Users::PATH}/#{user.id}"
+      users_path(user.id)
     end
 
     private
