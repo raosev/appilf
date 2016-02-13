@@ -124,7 +124,7 @@ describe Appilf::Listing do
 
   describe '.retrieve' do
     let(:listing) { Appilf::Listing.retrieve(6046240) }
-    before { stub_api_get_request(Appilf::Listing.listing_path(6046240), 'listing/listing.json') }
+    before { stub_api_get_request(Appilf::Listing.listings_path(6046240), 'listing/listing.json') }
 
     it 'should return a Listing' do
       listing.class.should == Appilf::Listing
@@ -135,7 +135,7 @@ describe Appilf::Listing do
 
     context 'without arguments' do
       let(:resource_page) { Appilf::Listing.list }
-      before { stub_api_get_request(Appilf::Listing::PATH, 'listing/listing_page_1.json') }
+      before { stub_api_get_request(Appilf::Listing.listings_path, 'listing/listing_page_1.json') }
 
       it 'should be a Appilf::ResourcePage' do
         resource_page.class.should == Appilf::ResourcePage
@@ -177,7 +177,7 @@ describe Appilf::Listing do
 
     context 'with pagination arguments' do
       let(:resource_page) { Appilf::Listing.list(page_number: 5, page_size: 100) }
-      before { stub_api_get_request(Appilf::Listing::PATH, 'listing/listing_page_5.json', 200,
+      before { stub_api_get_request(Appilf::Listing.listings_path, 'listing/listing_page_5.json', 200,
                                     {'page[number]' => 5, 'page[size]' => 100}) }
 
       it 'should return page 5 with 100 entries' do

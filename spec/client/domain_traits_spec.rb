@@ -8,7 +8,7 @@ describe Appilf::Client do
   describe '.list_domain_traits' do
     let(:domain_traits) { client.list_domain_traits(123) }
     before do
-      stub_api_get_request("#{Appilf::Listing.listing_path(123)}#{Appilf::Client::DomainTraits::PATH}",
+      stub_api_get_request(client.domain_traits_path(123),
                            'client/domain_trait/domain_traits.json')
     end
 

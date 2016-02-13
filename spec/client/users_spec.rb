@@ -7,7 +7,7 @@ describe Appilf::Client do
 
   describe '.retrieve_user' do
     let(:user) { client.retrieve_user(123) }
-    before { stub_api_get_request("#{Appilf::Client::Users::PATH}/123", 'client/user.json') }
+    before { stub_api_get_request(client.users_path(123), 'client/user.json') }
 
     it 'should return an User entry' do
       user.class.should == Appilf::User

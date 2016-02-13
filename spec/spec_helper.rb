@@ -23,6 +23,12 @@ module Appilf
                     status: code)
     end
 
+    def stub_api_delete_request(api_path, request_body = {}, code = 204)
+      stub_request(:delete, api_path).
+          with(body: request_body).
+          to_return(status: code)
+    end
+
     def load_test_data(mocked_response_path)
       File.read(mocked_response_path)
     end
