@@ -1,0 +1,29 @@
+{
+  "data": {
+    "type": "watched-items",
+    "id": "789",
+    "relationships": {
+      "watcher": {
+        "links": {
+          "self": "https://api.flippa.com/v3/users/123"
+        },
+        "data": {
+          "type": "users",
+          "id": "123"
+        }
+      },
+      "item": {
+        "links": {
+          "self": "https://api.flippa.com/v3/listings/456"
+        },
+        "data": {
+          "type": "listings",
+          "id": "456"
+        }
+      },
+      "links": {
+        "self": "https://api.flippa.com/v3/watched-items/789"
+      }
+    }
+  }
+}

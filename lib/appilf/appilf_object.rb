@@ -39,6 +39,7 @@ module Appilf
     end
 
     def add_relationships(relationships_hash)
+      return unless relationships_hash
       self.class.instance_eval do
         relationships_hash.each_pair do |k, v|
           define_method(k) { Util.translate_from_response(v) }
