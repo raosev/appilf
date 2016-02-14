@@ -19,7 +19,4 @@ module Appilf
   # Raised on error 500
   class InternalServerError < Error; end
 
-  # Errors within the gem
-  class NonExistentPage < Error; end
-
 end

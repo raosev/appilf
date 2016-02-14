@@ -169,8 +169,8 @@ describe Appilf::Listing do
       end
 
       context 'navigating to non existent page' do
-        it 'should raise a NonExistentPage error' do
-          expect { resource_page.previous }.to raise_error(Appilf::NonExistentPage)
+        it 'should return nil' do
+          resource_page.previous.should be_nil
         end
       end
     end

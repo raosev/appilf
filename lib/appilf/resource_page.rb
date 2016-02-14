@@ -44,7 +44,7 @@ module Appilf
     private
 
     def get_page(link)
-      raise NonExistentPage.new("Cannot navigate to non existent page") unless link
+      return unless link
       response = api_get(link)
       Util.translate_from_response(response)
       # set_page(response)
