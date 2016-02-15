@@ -1,8 +1,8 @@
 # Appilf (╯°□°）╯︵ ┻━┻
 
-[![Build Status](https://travis-ci.org/rogeliosevilla1/appilf.svg?branch=master)](https://travis-ci.org/rogeliosevilla1/appilf)
+[![Build Status](https://travis-ci.org/raosev/appilf.svg?branch=master)](https://travis-ci.org/raosev/appilf)
 
-[![Coverage Status](https://coveralls.io/repos/github/rogeliosevilla1/appilf/badge.svg?branch=master)](https://coveralls.io/github/rogeliosevilla1/appilf?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/raosev/appilf/badge.svg?branch=master)](https://coveralls.io/github/raosev/appilf?branch=master)
 
 Appilf is a simple Ruby wrapper for Flippa's API (https://developers.flippa.com/),
 
