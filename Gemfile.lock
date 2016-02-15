@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    appilf (0.0.1)
+    appilf (0.1.0)
       json (~> 1.8)
       methodize (~> 0.3)
       rest-client (~> 1.4)
