@@ -187,5 +187,5 @@ client.delete_watched_item('listing', 123) => :success
 
 
 ##TODO's
- * Handle pagination correctly for resources that require authentication (affects Only Saved Searches for now)
+ * Handle pagination correctly for resources that require authentication (affects only Saved Searches for now)
  * Improve the testing suite by adding test cases involving bad requests
