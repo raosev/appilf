@@ -5,14 +5,31 @@
 [![Coverage Status](https://coveralls.io/repos/github/rogeliosevilla1/appilf/badge.svg?branch=master)](https://coveralls.io/github/rogeliosevilla1/appilf?branch=master)
 
 Appilf is a simple Ruby wrapper for Flippa's API (https://developers.flippa.com/),
-currently covering the following resources:
+
+##Installing
+
+Install via Rubygems
+
+```
+gem install appilf
+```
+
+Or through your Gemfile
+
+```
+gem "appilf", "~> 0.1"
+```
 
 
-##Authentication not required
+##Overview
+Appilf currently covers the following resources:
+
+
+###Authentication not required
 
  * Listings
 
-##Authentication required
+###Authentication required
 
  * Users
  * Domain Traits
