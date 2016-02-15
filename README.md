@@ -23,7 +23,7 @@ currently covering the following resources:
 
 ##Authentication
 
-As of now, Flippa only supports authentication through Password Grant
+As of now, Appilf only supports authentication through Password Grant
 (https://developers.flippa.com/#client-credentials-grant).  There are 2 ways to initialize the client:
 
 ```ruby
@@ -184,3 +184,8 @@ by passing the same arguments as the previous method. (e.g.)
 ```ruby
 client.delete_watched_item('listing', 123) => :success
 ```
+
+
+##TODO's
+ * Handle pagination correctly for resources that require authentication (affects Only Saved Searches for now)
+ * Improve the testing suite by adding test cases involving bad requests
